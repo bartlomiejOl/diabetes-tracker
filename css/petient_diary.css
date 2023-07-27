@@ -1,0 +1,126 @@
+.diary {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 80vh;
+  font-size: 1rem;
+  flex-direction: column;
+}
+
+.diary-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border-radius: 12px;
+  font-size: 15px;
+}
+
+.display-div {
+  display: flex;
+  text-align: start;
+  flex-direction: column;
+  height: 700px;
+  margin-top: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 50px;
+  border-radius: 12px;
+  width: 900px;
+  overflow: auto;
+}
+.display-div::-webkit-scrollbar {
+  display: none;
+}
+.buttons-add-div {
+  display: flex;
+  text-align: start;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.summary-button {
+  background-color: lightblue;
+  color: black;
+  padding: 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  width: 200px;
+}
+
+.diary input {
+  border: 2px solid #aaa;
+  border-radius: 5px;
+  margin: 15px 5px;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  width: 200px;
+}
+
+.diary input[type='text'] {
+  border: 2px solid #aaa;
+  border-radius: 5px;
+  margin: 15px 5px;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  width: 400px;
+}
+
+.errorD {
+  color: red;
+}
+
+table {
+  border-color: white;
+}
+
+table th {
+  color: black;
+  background-color: gray;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+table td {
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.btnDel {
+  color: darkred;
+  background-color: transparent;
+  outline: none;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px;
+  text-decoration: none;
+  border: none;
+}
+.btn-add {
+  background-color: limegreen;
+  color: black;
+  padding: 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  width: 200px;
+}
+
+.date-from-to {
+  font-size: 15px;
+}
+
+.date-from-to input[type='date'] {
+  color: black;
+}
+
+.date-from-to input[type='submit'] {
+  margin-left: 20px;
+  color: black;
+}

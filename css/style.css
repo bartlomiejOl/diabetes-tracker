@@ -1,80 +1,99 @@
-@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100&family=Noto+Sans+Vithkuqi&display=swap');
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   width: 100%;
   height: 100vh;
-  background-image: url("../images/background.jpg");
-  
+  background-image: url('../images/background.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
- header{
-   height: 100px;
-   background: rgba(0, 0, 0, 0.7);
-   display: flex;
-   justify-content: space-around;
-   align-items: center;
-   border-bottom: 1px solid #fff;
- }
- ul{
-   display: flex;
-   list-style-type: none ;
- }
- header .logo{
-  padding: 22px 20px;
-  height: 80px;
-  float: left;
-  font-size: 24px;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #fff;
-  font-family: "Creepster";
-}
-.logo a{
-  text-decoration: none;
-  color: white;
-}
-header ul li a{
-  line-height: 80px;
-  color: #fff;
-  padding: 12px 30px;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: bold;
-  text-transform: uppercase;
+
+.error {
+  color: red;
+  margin: 10px 0px;
 }
 
-header ul li a:hover{
-  background: rgba(238, 130, 238, 0.7);
-  border-radius: 7px;
-}
-main{
-  height: calc(100vh - 100px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+nav {
   background: rgba(0, 0, 0, 0.7);
+  padding: 5px 40px;
+  border-bottom: 1px solid #fff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul li {
+  padding: 15px 0;
+  cursor: pointer;
+}
+
+nav ul li.items {
+  position: relative;
+  width: auto;
+  margin: 0 20px;
+  text-align: center;
+  order: 3;
+}
+
+nav ul li.items::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 5px;
+  height: 2px;
+  width: 100%;
+  background: greenyellow;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+
+nav ul li.items:hover:after {
+  opacity: 1;
+  bottom: 8px;
+}
+
+nav ul li.logo {
+  flex: 1;
+  font-family: 'Geologica';
+  font-size: 23px;
+  font-weight: 600;
+  cursor: default;
+  user-select: none;
+}
+
+nav ul li a {
   color: white;
-}
- main .content.main-header{
-  border: 1px solid red;
-}
-#main_header{
-  color: #fff;
-  text-transform: uppercase;
-  border: 2px solid white;
-  padding: 20px 20px;
-  border-radius: 9px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.4s;
 }
 
+nav ul li:hover a {
+  color: greenyellow;
+  text-decoration: none;
+}
 
-footer{
+nav ul li.btn {
+  display: none;
+}
+
+nav ul li.btn.show i:before {
+  content: '\f00d';
+}
+
+footer {
   border-top: 1px solid #fff;
   background: black;
   height: 100px;
@@ -84,73 +103,101 @@ footer{
   align-items: center;
 }
 
-/* LOGIN */
-
-.login{
-  width: 400px;
-  height: 400px;
-  background: rgba(0, 0, 0, 0.7);
-  border-radius: 9px;
-}
-.login-form{
+main {
+  height: calc(100vh - 100px);
   display: flex;
   justify-content: center;
-  flex-direction: column;
   align-items: center;
-
-}
-#login_header{
- margin-top: 20px;
-}
-.login-form input[type=text],input[type=password],input[type=submit],input[type=button]{
-  border: 2px solid #aaa;
-  border-radius: 5px;
-  margin: 8px 0;
-  outline: none;
-  padding: 8px;
-  box-sizing: border-box;
-  margin-top: 40px;
-  width: 250px;
-}
-.login-form input[type=submit],input[type=button]{
-  width: 100px;
-}
-.login form input[type=text]:focus,input[type=password]:focus{
-  border-color: dodgerblue;
-  box-shadow: 0 0 8px 0 dodgerblue;
+  color: white;
+  flex-direction: column;
 }
 
+.registerMessage {
+  border: 1ps solid red;
+}
 
-/* REGISTER */
-.register{
-  width: 400px;
-  height: 600px;
-  background: rgba(0, 0, 0, 0.7);
+.main_header {
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  text-transform: uppercase;
+  border: 2px solid white;
+  padding: 20px 20px;
   border-radius: 9px;
+  text-align: center;
 }
-#register_header{
-  margin-top: 20px;
- }
- .register-form{
+
+.active {
+  color: cyan;
+}
+
+.close span {
+  font-size: 30px;
+}
+
+.modal-content {
+  width: 100%;
+}
+
+.modal-dialog-centered {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  min-height: calc(100% - (0.5rem * 2));
 }
-.register-form input[type=text],input[type=password],input[type=submit],input[type=email]{
-  border: 2px solid #aaa;
-  border-radius: 5px;
-  margin: 8px 0;
-  outline: none;
-  padding: 8px;
-  box-sizing: border-box;
-  margin-top: 30px;
-  width: 250px;
+
+.modal-body {
+  color: black;
 }
-.register-form input[type=submit]{
-  width: 100px;
+.modal-title {
+  margin: 10px 0;
+  text-align: center;
+  color: black;
 }
-.register-form input[type=text]:focus,input[type=password]:focus,input[type=email]:focus{
-  border-color: dodgerblue;
-  box-shadow: 0 0 8px 0 dodgerblue;
+
+@media only screen and (max-width: 768px) {
+  header .logo {
+    padding: 0;
+    height: 50px;
+    margin-left: 10px;
+  }
+
+  header ul li {
+    padding: 0;
+  }
+
+  header ul li a {
+    padding: 7px;
+  }
+
+  header {
+    width: 100%;
+  }
+
+  nav {
+    padding: 5px 30px;
+  }
+
+  nav ul li.items {
+    width: 100%;
+    display: none;
+  }
+
+  nav ul li.items.show {
+    display: block;
+  }
+
+  nav ul li.btn {
+    display: block;
+  }
+
+  nav ul li.items:hover {
+    box-shadow: inset 0 0 5px #33ffff, inset 0 0 10px #66ffff;
+    border-radius: 5px;
+  }
+
+  nav ul li.items:hover:after {
+    opacity: 0;
+  }
 }

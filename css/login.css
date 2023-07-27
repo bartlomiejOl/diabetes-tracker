@@ -1,0 +1,57 @@
+.login {
+  width: 400px;
+  height: 500px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 9px;
+}
+
+.login-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#login_header {
+  margin-top: 20px;
+}
+
+.login-form input[type='text'],
+.login-form input[type='password'],
+.login-form input[type='submit'],
+.login-form input[type='button'] {
+  border: 2px solid #aaa;
+  border-radius: 5px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  margin-top: 40px;
+  width: 250px;
+}
+
+.login-form input[type='submit'],
+input[type='button'] {
+  width: 100px;
+}
+
+.login form input[type='text']:focus,
+input[type='password']:focus {
+  border-color: dodgerblue;
+  box-shadow: 0 0 8px 0 dodgerblue;
+}
+
+.registerMess {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.registerMess a {
+  text-decoration: none;
+  padding: 7px;
+  border-radius: 5px;
+  margin-left: 10px;
+  background: white;
+  color: black;
+  outline: black;
+}
